@@ -16,11 +16,17 @@
 <!-- Material Design Lite CSS -->
 <link rel="stylesheet" href="assets/plugins/material/material.min.css">
 <link rel="stylesheet" href="assets/css/material_style.css">
+
+<!-- Jquery Toast css -->
+<link rel="stylesheet" href="assets/plugins/jquery-toast/dist/jquery.toast.min.css">
+
 <!-- Theme Styles -->
 <link href="assets/css/theme/light/theme_style.css" rel="stylesheet" id="rt_style_components" type="text/css"/>
 <link href="assets/css/plugins.min.css" rel="stylesheet" type="text/css"/>
 <link href="assets/css/theme/light/style.css" rel="stylesheet" type="text/css"/>
 <link href="assets/css/responsive.css" rel="stylesheet" type="text/css"/>
 <link href="assets/css/theme/light/theme-color.css" rel="stylesheet" type="text/css"/>
+
+<link href="assets/plugins/sweet-alert/sweetalert2.min.css" rel="stylesheet">
 <!-- favicon -->
 <link rel="shortcut icon" href="assets/images/kuet_logo.png"/>

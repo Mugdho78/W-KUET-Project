@@ -2,3 +2,4 @@ RewriteEngine on
 
 RewriteRule ^login login.php [L]
 RewriteRule ^dashboard dashboard.php [L]
+RewriteRule ^course course.php [L]

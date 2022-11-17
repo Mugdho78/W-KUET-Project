@@ -18,6 +18,9 @@
                 if(Password_verify($Pwd_peppered, $pass)){
                     session_start();
                     $_SESSION["user_id"] = $user_id;
+                    $_SESSION["alert_icon"] = 'success';
+                    $_SESSION["alert_title"] = 'Welcome Back!';
+                    $_SESSION["alert_message"] = 'You are successfully logged in.';
                     header("Location: dashboard");
                 } else{
                     $result = 2;

@@ -1,7 +1,7 @@
 <?php
 session_start();
 include("config/dbconfig.php");
-if (!isset($_SESSION["user_id"])){
+if (!isset($_SESSION["user_id"])) {
     header("Location: login");
 }
 $page = "dashboard";
@@ -10,8 +10,8 @@ $page = "dashboard";
 <html lang="en">
 <!-- BEGIN HEAD -->
 <head>
-<!--include all the css and header links-->
-    <?php include ("includes/head.php");?>
+    <!--include all the css and header links-->
+    <?php include("includes/head.php"); ?>
     <title>IICT-KUET Dashboard</title>
 </head>
 <!-- END HEAD -->
@@ -23,26 +23,26 @@ $page = "dashboard";
     <div class="page-header navbar navbar-fixed-top">
         <div class="page-header-inner ">
             <!-- logo start -->
-            <?php include ("includes/header_logo.php");?>
+            <?php include("includes/header_logo.php"); ?>
             <!-- logo end -->
 
             <!--mobile menu and menu left hide-->
-            <?php include ("includes/mobile_menu.php");?>
+            <?php include("includes/mobile_menu.php"); ?>
             <!-- start header menu -->
             <div class="top-menu">
                 <ul class="nav navbar-nav pull-right">
                     <li><a class="fullscreen-btn"><i data-feather="maximize"></i></a></li>
 
                     <!-- start notification dropdown -->
-                    <?php include ("includes/header_notification.php");?>
+                    <?php include("includes/header_notification.php"); ?>
                     <!-- end notification dropdown -->
 
                     <!-- start message dropdown -->
-                    <?php include ("includes/header_message.php");?>
+                    <?php include("includes/header_message.php"); ?>
                     <!-- end message dropdown -->
 
                     <!-- start manage user dropdown -->
-                    <?php include ("includes/header_profile.php");?>
+                    <?php include("includes/header_profile.php"); ?>
                     <!-- end manage user dropdown -->
 
                 </ul>
@@ -55,7 +55,7 @@ $page = "dashboard";
     <!-- start page container -->
     <div class="page-container">
         <!-- start sidebar menu -->
-        <?php include ("includes/sidebar.php");?>
+        <?php include("includes/sidebar.php"); ?>
         <!-- end sidebar menu -->
 
         <!-- start page content -->
@@ -149,12 +149,33 @@ $page = "dashboard";
 
 
     <!-- start footer -->
-    <?php include ("includes/footer.php");?>
+    <?php include("includes/footer.php"); ?>
     <!-- end footer -->
+
 </div>
 <!-- start js include path -->
-<?php include ("includes/js.php");?>
+<?php include("includes/js.php"); ?>
 <!-- end js include path -->
+<?php
+if (isset($_SESSION["alert_message"]) && isset($_SESSION["alert_icon"]) && isset($_SESSION["alert_title"])){
+    ?>
+    <script>
+        $.toast({
+            heading: '<?php echo $_SESSION["alert_title"];?>',
+            text: '<?php echo $_SESSION["alert_message"];?>',
+            position: 'top-right',
+            loaderBg:'#ffffff',
+            icon: '<?php echo $_SESSION["alert_icon"];?>',
+            hideAfter: 3500,
+            stack: 6
+        });
+    </script>
+    <?php
+    unset($_SESSION["alert_message"]);
+    unset($_SESSION["alert_title"]);
+    unset($_SESSION["alert_icon"]);
+}
+?>
 </body>
 
 

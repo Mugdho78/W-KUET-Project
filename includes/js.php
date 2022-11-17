@@ -6,6 +6,8 @@
 <!-- bootstrap -->
 <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/plugins/bootstrap-switch/js/bootstrap-switch.min.js"></script>
+<!--notificatio-->
+<script src="assets/plugins/jquery-toast/dist/jquery.toast.min.js"></script>
 <!-- Common js-->
 <script src="assets/js/app.js"></script>
 <script src="assets/js/layout.js"></script>
@@ -17,3 +19,6 @@
 <script src="assets/js/pages/chart/apex/home-data3.js"></script>
 <script src="assets/plugins/sparkline/jquery.sparkline.js"></script>
 <script src="assets/js/pages/sparkline/sparkline-data.js"></script>
+<!--sweet alert-->
+<script src="assets/plugins/sweet-alert/sweetalert2.all.min.js"></script>
+<script src="assets/plugins/sweet-alert/sweetalert2.min.js"></script>
